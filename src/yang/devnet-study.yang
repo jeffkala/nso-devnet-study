@@ -42,7 +42,7 @@ module devnet-study {
     }
 
     // bgp neighbor ipv4 address
-    leaf bpg_neighbor_addr {
+    leaf bgp_neighbor_addr {
       type inet:ipv4-address;
     }
 
