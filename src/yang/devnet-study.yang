@@ -35,15 +35,25 @@ module devnet-study {
     ncs:servicepoint devnet-study-servicepoint;
 
     // may replace this with other ways of refering to the devices.
-    leaf-list device {
+    leaf device {
       type leafref {
         path "/ncs:devices/ncs:device/ncs:name";
       }
     }
 
-    // replace with your own stuff here
-    leaf dummy {
+    // bgp neighbor ipv4 address
+    leaf bpg_neighbor_addr {
       type inet:ipv4-address;
+    }
+
+    // bgp local-as
+    leaf bgp_local_as {
+      type inet:as-number
+    }
+
+    // bgp remote-as
+    leaf bgp_remote_as {
+      type inet:as-number
     }
   }
 }
