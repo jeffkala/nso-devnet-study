@@ -48,12 +48,12 @@ module devnet-study {
 
     // bgp local-as
     leaf bgp_local_as {
-      type inet:as-number
+      type inet:as-number;
     }
 
     // bgp remote-as
     leaf bgp_remote_as {
-      type inet:as-number
+      type inet:as-number;
     }
   }
 }
