@@ -15,6 +15,7 @@ class ServiceCallbacks(Service):
         self.log.info('Service create(service=', service._path, ')')
 
         vars = ncs.template.Variables()
+        self.log.info(f"VARS before ADD: {vars}")
         vars.add('DUMMY', '127.0.0.1')
         template = ncs.template.Template(service)
         template.apply('devnet-study-template', vars)
